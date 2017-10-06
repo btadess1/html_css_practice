@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	.container{
+		width: 620px;
+		height: 500px;
+		border: 1px solid black;
+	}
+	.top{
+		display: flex;
+		width: 620px;
+		height: 200px;
+		border: 1px solid yellow;
+	}
+	.boxes{
+		width: 150px;
+		border: 1px solid red;
+		height: 150px;
+	}
+
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<title></title>
+
+	<script>
+		$(document).ready(function(){
+			//hide the current image clicked
+			$("img").click(function(){
+				$(this).hide();
+			});
+
+			//display all the image hidden
+			$(".restore").click(function(){
+				$("img").show();
+			});
+
+		});
+	</script>
+
+</head>
+<body>
+	<div class="container">
+		<div class="top">
+			<div class="boxes">
+				<img src="pic1.jpg" alt="my picture" width="150" height="150">
+			</div>
+			<div class="boxes">
+				<img src="pic1.jpg" alt="my picture" width="150" height="150">
+			</div>
+			<div class="boxes">
+				<img src="pic1.jpg" alt="my picture" width="150" height="150">
+			</div>
+			<div class="boxes">
+				<img src="pic1.jpg" alt="my picture" width="150" height="150">
+			</div>
+		</div>
+
+		<div class="top">
+			<div class="boxes">
+				<img src="pic1.jpg" alt="my picture" width="150" height="150">
+			</div>
+			<div class="boxes">
+				<img src="pic1.jpg" alt="my picture" width="150" height="150">
+			</div>
+			<div class="boxes">
+				<img src="pic1.jpg" alt="my picture" width="150" height="150">
+			</div>
+			<div class="boxes">
+				<img src="pic1.jpg" alt="my picture" width="150" height="150">
+			</div>
+		</div>
+		<button class="restore">restore</button>
+	</div>
+</body>
+</html>
