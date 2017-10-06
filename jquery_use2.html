@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	.container{
+		width: 150px;
+		border: 1px solid black;
+	}
+	
+	.boxes{
+		width: 150px;
+		border: 1px solid red;
+	}
+
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<title></title>
+
+	<script>
+		$(document).ready(function(){
+			//make an array of picture sources
+			var arr =["cat0.png", "cat1.png", "cat2.png", "cat3.png", "cat4.png", "ninja0.png", "ninja1.png", "ninja2.png", "ninja3.png", "ninja4.png"];
+			//hide the current image clicked
+			$("img").click(function(){
+				$(this).hide();
+			});
+
+			//display all the image hidden
+			$(".restore").click(function(){
+				$("img").show();
+			});
+
+			$("img").click(function(){
+        		if($(this).hasClass("cat")){
+        			$(this).attr("src", "img/ninja3.png");
+        		}else{
+        			$(this).attr("src", "img/cat3.png");
+        		}
+        		$(this).show();
+    		});
+
+		});
+	</script>
+
+</head>
+<body>
+		<div class="container">
+			<div class="boxes">
+				<img class="cat" src="img/cat0.png" alt_src ="img/cat3.png" alt="my picture" width="150">
+			</div>
+			<div class="boxes">
+				<img class="ninja" src="img/ninja3.png" alt="my picture" width="150">
+			</div>
+			<div class="boxes">
+				<img class="ninja" src="img/ninja0.png" alt="my picture" width="150">
+			</div>
+			<div class="boxes">
+				<img class="cat" src="img/cat2.png" alt="my picture" width="150">
+			</div>
+
+			<div class="boxes">
+				<img class="cat" src="img/cat1.png" alt="my picture" width="150">
+			</div>
+		</div>
+
+</body>
+</html>
